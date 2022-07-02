@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Import the component -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <title>Document</title>
+    <style>
+        model-viewer {
+            width: 100%;
+            height: 800px;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <model-viewer src="3_seconds_of_vacations/scene.gltf" camera-controls auto-rotate>
+    </model-viewer>
+
+    <script>
+        // const Person = function(first, last, age) {
+        //     this.firstName = first;
+        //     this.lastName = last;
+        //     this.age = age;
+        //     this.fullName = function () {
+        //         return this.firstName + ' ' + this.lastName
+        //     }
+        // }
+        // const sumit = new Person('sumit', 'saha', 35);
+        // const jasim = new Person('Jasim', 'Uddin', 30);
+        // const rahim = new Person('Rahim', 'Islam', 32);
+        // console.log(sumit.fullName());
+
+
+
+
+        const shape = {
+            radius: 10,
+            diameter() {
+                return this.radius * 2;
+            },
+            perimeter: () => 2 * Math.PI * this.radius,
+        };
+        console.log(shape.diameter());
+        console.log(shape.perimeter());
+
+    </script>
+</body>
+
+</html>
