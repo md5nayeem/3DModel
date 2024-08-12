@@ -5,53 +5,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Import the component -->
+    <!-- Import the Model Viewer component from Google's CDN -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <title>Document</title>
+    <title>3D Object</title>
     <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
         model-viewer {
-            width: 100%;
-            height: 800px;
-            padding: 0;
-            margin: 0;
+            width: 100vw;
+            height: 100vh;
         }
     </style>
 </head>
 
 <body>
-
-
-    <model-viewer src="3_seconds_of_vacations/scene.gltf" camera-controls auto-rotate>
+    <!-- Embed the 3D model using the Model Viewer component -->
+    <model-viewer src="./car.glb" camera-controls auto-rotate>
     </model-viewer>
 
-    <script>
-        // const Person = function(first, last, age) {
-        //     this.firstName = first;
-        //     this.lastName = last;
-        //     this.age = age;
-        //     this.fullName = function () {
-        //         return this.firstName + ' ' + this.lastName
-        //     }
-        // }
-        // const sumit = new Person('sumit', 'saha', 35);
-        // const jasim = new Person('Jasim', 'Uddin', 30);
-        // const rahim = new Person('Rahim', 'Islam', 32);
-        // console.log(sumit.fullName());
-
-
-
-
-        const shape = {
-            radius: 10,
-            diameter() {
-                return this.radius * 2;
-            },
-            perimeter: () => 2 * Math.PI * this.radius,
-        };
-        console.log(shape.diameter());
-        console.log(shape.perimeter());
-
-    </script>
+    <!-- Link to the original Sketchfab model -->
+    <a href="https://sketchfab.com/3d-models/dodge-challenger-rt-scat-pack-widebody-free-9f90a0b2d1c54ae8a660f41f150610e8" target="_blank"
+        style="font-size: 10px; margin-bottom: 10px;">"Dodge Challenger R/T Scat Pack Widebody (FREE)"
+        (https://skfb.ly/p7ARU) by BadKarma™ is
+        licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).</a>
 </body>
 
 </html>
